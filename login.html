@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/login.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="text">
+            <h1> Acesse a sua conta </h1>
+        </div>
+        <form method="get" onsubmit="return false;">
+            <label class="input">
+                <img src="./img/Email.svg" alt="Email">  
+                <input type="email" placeholder="Seu e-mail aqui" aria-placeholder="Seu e-mail aqui" name="email" id="email" required autocomplete="on">
+            </label>
+            <label class="input">
+                <img src="./img/Lock.svg" alt="Email">
+                <input type="password" placeholder="Sua senha" aria-placeholder="Sua senha" name="senha" id="senha" required>
+            </label>
+            <div class="container-botao">
+                <button class="botao" id="botao">
+                        Entrar
+                </button>
+                <span> 
+                    <a href="#"> Esqueci a Senha </a> 
+                </span>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <span> Ainda não tem uma conta? </span>
+        <a href="./index.html"> Criar Conta </a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefas</title>
+  <link rel="stylesheet" href="./css/tarefas.css">
+</head>
+<body>
+  <div id="app">
+    <h2>Tarefas</h2>
+    <div v-if="tasks.length === 0" class="no-tasks-message">Nenhuma tarefa encontrada.</div>
+    <div v-else>
+      <div v-for="(task, index) in tasks" :key="index" class="task">
+        <div class="task-details">
+          <h3>{{ task.title }}</h3>
+          <p>{{ task.description }}</p>
+          <p>Data de Conclusão: {{ task.dueDate }}</p>
+        </div>
+        <div class="task-actions">
+          <button @click="editTask(index)">Editar</button>
+          <button @click="deleteTask(index)">Excluir</button>
+        </div>
+      </div>
+    </div>
+    <button @click="showForm = true" class="add-task-button">Adicionar Tarefa</button>
+    <div v-if="showForm" class="task-form">
+      <h3>Nova Tarefa</h3>
+      <input type="text" v-model="newTask.title" placeholder="Título" required>
+      <textarea v-model="newTask.description" placeholder="Descrição" required></textarea>
+      <input type="date" v-model="newTask.dueDate" required>
+      <button @click="addTask">Adicionar</button>
+      <button @click="showForm = false">Cancelar</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="./js/tarefas.js"></script>
+</body>
+</html>

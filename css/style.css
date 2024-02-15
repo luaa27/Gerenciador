@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+ul, ol, li{
+    list-style: none;
+}
+
+button{
+    background-color: inherit;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    padding-inline: 0;
+    padding-block: 0;
+}
+
+input, input:focus{
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+    background: transparent;
+} 
+
+input::placeholder{
+    color: inherit;
+    font-family: inherit;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --laranja: #F27706;
+    --branco: #ffffff;
+    --verde: #199570;
+    --verde-claro: #23CB98;
+    --vermelho: #F93030;
+    --vermelho-hover: #fc3838;
+    --cinza: #999999;
+    --cinza-claro: #F5F5F5;
+    --cinza-comentario: #AEA6A6;
+    --cinza-usuario: #C4C4C4;
+    --bege: #F4E2D1;
+    --gradiente-laranja: linear-gradient(180deg, rgba(252,121,0,0.85) 35%, rgba(252,121,0,0) 100%);
+    --gradiente-laranja-desktop: linear-gradient(180deg, rgba(252,121,0,1) 5%, rgba(255,153,60,0.85) 50%, rgba(252,121,0,1) 95%);
+    --fonte-principal: 'Roboto', sans-serif;
+}
+body{
+    font-family: var(--fonte-principal);
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    height: 100vh;
+
+ 
+}   
+
+header{
+    padding: 5vh 1.5rem 0 1.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    z-index: 1;
+    font-size: 50px;
+}
+.h3{
+    font-size: 600px;
+}
+
+
+main{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: calc(15vh + 1.5rem);
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#imagem-usuario img{
+    width: 70%;
+    height: 70%;
+}
+
+#imagem-usuario label{
+    position: absolute;
+    background-color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#imagem-usuario label img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#imagem-usuario input{
+    display: none;
+}
+
+main form fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+main form fieldset div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.30rem;
+    position: relative;
+}
+
+main form fieldset div label{
+    color: black;
+    font-size: 0.75rem;
+}
+
+main form fieldset div input{
+    color: black;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+main form fieldset div:not(:first-child)::after{
+    content: '';
+    display: block;
+    width: 100%;
+    min-height: 1px;
+    position: absolute;
+    background-color: var(--cinza-usuario);
+    bottom: -0.75rem;
+}
+
+.botao{
+    width: 30%;
+    padding-block: 1rem;
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.botao a{
+    width: 100%;
+    height: 100%;
+}
+
+.botao-verde{
+    background-color: black;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.label{
+    color: black;
+}
