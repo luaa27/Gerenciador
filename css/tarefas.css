@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: black;
+    
+  }
+  
+  .task {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  
+  }
+  
+  .task-details {
+    flex: 1;
+  }
+  
+  .task-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-task-button {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .task-form {
+    margin-top: 20px;
+  }
+  
+  .task-form input,
+  .task-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .task-form button {
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .no-tasks-message {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  h2{
+    color: white;
+    font-size: 40px;
+  }
+  .textarea{
+    color: black;
+  }
